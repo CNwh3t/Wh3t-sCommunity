@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <property name="dialect" value="mysql"/>
+            <!--reasonable: Rationalization of paging parameters,
+            Default value is false。 When this parameter is set to true,
+             pageNum <= 0 will query the first page,
+             PageNum> pages (over the total number),
+              will query the last page. Default false,
+               the query directly based on parameters.-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+</configuration>
